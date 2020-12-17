@@ -1,0 +1,11 @@
+{% extends "encyclopedia/layout.html" %} {% block title %} {{error_title}}
+{%endblock %} {% block body %}
+<h1>"{{title|title}}" - {{error_msg|title}}</h1>
+<form action="{% url 'index' %}">
+	<button>Return Home</button>
+</form>
+<form action="{% url 'create' %}">
+	<button>Create New Entry</button>
+</form>
+
+{% endblock %}
